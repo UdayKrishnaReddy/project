@@ -1,0 +1,20 @@
+{
+  "name": "myproject_backend",
+  "version": "1.0.0",
+  "description": "websevice",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "uday",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
+    "mariadb": "^3.0.2",
+    "sequelize": "^6.25.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

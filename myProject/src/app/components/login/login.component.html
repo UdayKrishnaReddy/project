@@ -1,0 +1,39 @@
+<div class="display-4 text-center" style="margin-top: 100px;">
+    Show Yourself
+</div>  
+<div class="row">
+    <div class="col-4 offset-4">
+
+        <form  style="margin-top: 30px;" class="login-form" [formGroup]="loginForm" (ngSubmit)="login()">
+            <mat-form-field  appearance="outline">
+                <mat-label>Username</mat-label>
+                <input  matInput formControlName="username">
+                <mat-error *ngIf="(loginForm.controls['username'].dirty || loginForm.controls['username'].touched )&& loginForm.controls['username'].errors?.['required']">
+                    Username is <strong>required</strong>
+                </mat-error>
+                <mat-error *ngIf="(loginForm.controls['username'].dirty || loginForm.controls['username'].touched) && loginForm.controls['username'].errors?.['pattern']">
+                    Please enter <strong>valid</strong> Username
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input [type]="flag?'text':'password'"  matInput formControlName="password">
+                <button type="button" matSuffix mat-icon-button (click)="flag=!flag">
+                    <mat-icon>{{flag?'visibility_off':'visibility'}}</mat-icon>
+                </button>
+                <mat-error *ngIf="(loginForm.controls['password'].dirty || loginForm.controls['password'].touched )&& loginForm.controls['password'].errors?.['required']">
+                    Password is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+
+            <div class="text-center">
+                <button mat-raised-button color="primary" [disabled]="!loginForm.valid">
+                    login
+                </button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
