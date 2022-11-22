@@ -7,6 +7,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
 
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import {MatCardModule} from '@angular/material/card';
         MatTableModule,
         MatInputModule,
         MatFormFieldModule,
-        MatCardModule
+        MatCardModule,
+        MatTooltipModule
     ]
 })
 

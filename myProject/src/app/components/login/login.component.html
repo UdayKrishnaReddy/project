@@ -18,7 +18,7 @@
             <mat-form-field appearance="outline">
                 <mat-label>Password</mat-label>
                 <input [type]="flag?'text':'password'"  matInput formControlName="password">
-                <button type="button" matSuffix mat-icon-button (click)="flag=!flag">
+                <button [matTooltip]="flag?'password visibility off':'password visibility on'" type="button" matSuffix mat-icon-button (click)="flag=!flag">
                     <mat-icon>{{flag?'visibility_off':'visibility'}}</mat-icon>
                 </button>
                 <mat-error *ngIf="(loginForm.controls['password'].dirty || loginForm.controls['password'].touched )&& loginForm.controls['password'].errors?.['required']">
